@@ -1,0 +1,240 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Index</title>
+<meta name="description" content="eCommece"/>
+<meta name="keywords" content="shop,"/>
+<meta name="author" content="Paragyte LLC"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+</head>	
+
+<body>
+	<section id="header">
+	  <div class="top-header row">
+	   <div class="col-lg-6 text-left">
+	    <div>
+	     <h5><small>Phone orders: 1-800-0000</small><spacer></spacer><small>Email us:</small><a href="mailto:office@shop.com">   office@shop.com</a></h5>
+	    </div>
+	   </div>
+	   <div class="col-lg-6 text-right">
+	    <div>
+	     <h5><small>Currency:</small><b>USD</b><small>/</small><a href="#">EUR</a><small>/</small><a href="#">GBP</a></h5>
+	    </div>
+	   </div>
+	  </div>
+	  <div class="title-row row">
+	   <div class="col-lg-3">
+	    <h4>eCommerce</h4>
+	   </div>
+	   <div class="col-lg-6">
+	    <div class="shop-cat-dropdown dropdown hovernav">
+	     <h5>
+	      <a>
+	       <span>Shop by Category</span><span class="ion-ios7-arrow-down icon-hightlight"></span>
+	      </a>
+	     </h5>
+	      <ul class="dropdown-menu">
+	       <li>Test1</li>
+	       <li>Test2</li> 
+	      </ul>
+	     </div>
+	    <div class="search-category">
+	     <div class="search-text">
+	      <div class="search-input">
+	       <span class="ion-ios7-search-strong"></span>
+	       <input value="Type and hit enter"/>
+	      </div>
+	      <div class="search-cat-dropdown text-center dropdown hovernav">
+	       <a><span>All Categories</span><span class="ion-ios7-arrow-down icon-hightlight"></span></a>
+	       <ul class="dropdown-menu">
+	        <li>Test1</li>
+	        <li>Test2</li> 
+	       </ul>
+	      </div>
+	     </div>
+	    </div>
+	   </div>
+	   <div class="col-lg-3">
+	    <div class="adi-dropdown col-lg-6  dropdown hovernav">
+	     <h5><a><span class="ion-person icon-hightlight-blue"></span><b>Adi Purdila</b><span class="ion-ios7-arrow-down icon-hightlight"></span></a></h5>
+	     <ul class="dropdown-menu">
+	      <li>Test1</li>
+	      <li>Test2</li> 
+	     </ul>
+	    </div>
+	    <div class="cart-amnt col-lg-6 dropdown hovernav">
+	     <h5><span><img src="images/bucket.png"/><a></span><b>$500.50</b><span class="ion-ios7-arrow-down icon-hightlight"></span></a></h5>
+	     <ul class="dropdown-menu">
+	      <li>Test1</li>
+	      <li>Test2</li> 
+	     </ul>
+	    </div>
+	   </div>
+	  </div>
+	 </section>
+	
+	<!-- Slider -->
+	<section id="home-pattern" data-stellar-background-ratio="0.5" data-stellar-vertical-offset="">
+		<div class="home-container text-center">
+			<div class="home-title liquid-slider" id="slider-home">
+				<div class="text-left" >
+					<h2><small>Today's Deals</small></h2>
+					<p class="lead" >Check out this selection of products at a discounted price.</p>
+					<div class="home-btn">
+						<h5 class="btn-home"><a href="#about">Shop Now</a></h5>
+					</div>
+				</div>
+				<div class="text-left" >
+					<h2><small>Awesome deals</small></h2>
+					<p class="lead" >Check out this selection of products at a discounted price.</p>
+					<div class="home-btn">
+						<h5 class="btn-home"><a href="#about">Shop Now</a></h5>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider-nav">
+			<div class="nav-content">
+				<div class="nav-left ion-ios7-arrow-back"></div>
+				<div class="nav-right ion-ios7-arrow-forward"></div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Site Wrapper-->
+	<section class="site-wrapper">
+		<div class="container">
+			<div class="top-container">
+		    <div class="col-lg-3">
+		     <div class="featured center"><span>Featured</span></div>
+		    </div>
+		    <div class="col-lg-6">
+		     <div class="grid-view" id="gridView"><h4>View:</h4>
+		     	<a><img ng-click="clickGrid()" name="grid" ng-src="{{grid_src_path}}"/></a>
+		     	<a><img ng-click="clickList()" name="list" ng-src="{{list_src_path}}"/></a>
+		     </div>
+		    </div>
+		    <div class="col-lg-3">
+		     <div class="product-nav">
+		      <div ng-click="leftClicked()" class="left-nav ion-ios7-arrow-back"></div>
+		      <div ng-click="rightClicked()" class="right-nav ion-ios7-arrow-forward"></div>
+		     </div>
+		    </div> 
+		   </div>
+		  
+			<div class="products-row">
+				<div class="products-container">
+					<div ng-if= view_status=="grid">	
+						<div class="products col-lg-3 text-center" ng-repeat="product in products" ng-show="$index >= limit && $index < limit + 4">	
+							<div><img src="images/product1.png"/></div>
+							<div class="product-heading text-center"><h4>{{product.heading}}</h4></div>
+							<div class="product-description text-center"><h4><small>{{product.description}}</small></h4></div>
+							<div class="product-avail text-left">Avaialablity :<span class="highlight">{{product.availability}}</span></div>
+							<div class="product-rating text-left">Rating :<img src="images/stars.png"/></div>
+							<div class="product-btn"><span class="product-rate">{{product.price}}</span><span class="product-add">Add to cart</span></div>
+							<div class="add-widhlist"><img src="images/add-wishlist.png"/>Add to Wishlist</div>
+						</div>
+					</div>
+
+					<div ng-if= view_status=="list">	
+						<div class="products col-lg-12 text-center" ng-repeat="product in products" ng-show="$index >= limit && $index < limit + 4">
+							<div class="product-image"><img src="images/product1.png"/></div>
+							<div class="product-right-content">
+								<div class="product-heading text-left"><h4>{{product.heading}}</h4></div>
+								<div class="product-description text-left"><h4><small>{{product.description}}</small></h4></div>
+								<div class="product-avail text-left">Avaialablity :<span class="highlight">{{product.availability}}</span></div>
+								<div class="product-rating text-left">Rating :<img src="images/stars.png"/></div>
+								<div class="product-btn"><span class="product-rate">{{product.price}}</span><span class="product-add">Add to cart</span></div>
+								<div class="add-widhlist"><img src="images/add-wishlist.png"/>Add to Wishlist</div>
+							</div>
+						</div>
+					</div>
+						
+				</div>
+			</div>
+			<div class="contact-us text-center"><h3><small>For phone orders please call <b>1-800-0000.</b><br /></small></h3><h3><small>You can also email us at <a href="mailto:office@shop.com">office@shop.com</a></small></h3></div>
+		</div>
+	</section>
+	
+	<!--Footer-->
+	<section id="footer">
+		<div class="footer-container">
+			<div class="footer-links-container">
+				<div class="col-lg-6">
+					<div class="col-lg-4 footer-item">
+						<span class="footer-header">My Account</span>
+						<ul class="footer-links">
+							<li><a>Sign In</a></li>
+							<li><a>Create New Account</a></li>
+							<li><a>Wishlist</a></li>
+							<li><a>Order History</a></li>
+							<li><a>Preferences</a></li>
+							<li><a>Shopping Cart</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-4 footer-item">
+						<span class="footer-header">Information</span>
+						<ul class="footer-links">
+							<li><a>Returns</a></li>
+							<li><a>Brand Index</a></li>
+							<li><a>Gift Vouchers</a></li>
+							<li><a>Terms of use</a></li>
+							<li><a>Privacy Policy</a></li>
+						</ul>
+					</div>
+					<div class="col-lg-4 footer-item">
+						<span class="footer-header">Extras</span>
+						<ul class="footer-links">
+							<li><a>About Us</a></li>
+							<li><a>Contact Us</a></li>
+							<li><a>Sitemap</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="newsletter-content">
+						<div class="footer-header">Newsletter</div>
+						<div class="newsletter-description">
+							<h4><small>Please enter your email address below. Don’t worry, we won’t spam you.</small></h4>
+						</div>
+						<div class="newsletter-search">
+							<div class="newsletter-input"><input value="Email Address"/></div>
+							<a class="newsletter-btn">SUBSCRIBE</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="col-lg-6">
+					<h4>eCommerce<br /><small	>This is a short description of the store</small></h4>
+					<span class="copyright">(c) Copyright 2013 eCommerce. Theme design by Adi Purdila.</span>
+				</div>
+				<div class="col-lg-6">
+					<div class="connect-us col-lg-4">
+						<div class="footer-header">CONNECT WITH US</div>
+						<ul class="connect-links">
+							<li><a>Twitter</a></li>
+							<li><a>Facebook</a></li>
+						</ul>
+					</div>
+					<div class="payment-method">
+						<div class="footer-header">SUPPORTED PAYMENT METHOD</div>
+						<div class="payment-links">
+							<a><img src="images/payment-type.png"/></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	 	<script src="scripts/bootstrap.min.js"></script>
+	 	<script src="scripts/modernizr.custom.js"></script>
+	 	<script src="scripts/jquery.touchSwipe.min.js"></script>
+	  <script src="scripts/toucheffects.js"></script>
+	 <script src="scripts/jquery.liquid-slider.js"></script>
+	  <script src="scripts/scripts.js" ></script>
+</body>
+</html>
